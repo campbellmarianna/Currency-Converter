@@ -1,0 +1,16 @@
+What is a component?
+- export everything from the component
+Why is a container with in a component with it's own index and styles?
+
+Why React?
+- Developers work with a virtual browser that is more friendly than the real browser
+
+- React also handles if the user does this show this interface followup
+- React Native is a framework while React is a javaScript library you can use for websites 
+- React-Native doesn't render html they map to actual iOS and Andriod UI components
+
+Notes from Week 2 Session
+- The React Native components build out in native code
+- However the business logic is ran in javaScript
+- The developer that used the BackgroundImage component used the resize prop and gave it a value (they knew how to use it) because they read the documentation
+ - [Image Background Documentation](https://facebook.github.io/react-native/docs/imagebackground)
