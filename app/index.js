@@ -9,6 +9,9 @@ EStyleSheet.build({
   $primaryBlue: '#4F6D7A',
 
   $white: '#FFFFFF',
+  $border: '#E2E2E2',
+  $inputText: '#797979',
+  $lightGray: '#F0F0F0',
 });
 
 // Export a function that then returns a component
