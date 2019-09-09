@@ -5,6 +5,7 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 import Home from './screens/Home';
 
 // Build our stylesheet before our application renders
+// Set global variables and calc styles
 EStyleSheet.build({
   $primaryBlue: '#4F6D7A',
 
