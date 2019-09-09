@@ -3,12 +3,12 @@ import React from 'react';
 import { Text } from 'react-native';
 import moment from 'moment';
 
-// import styles from './styles';
+import styles from './styles';
 
 const LastConverted = ({
   base, quote, conversionRate, date }) => (
   // eslint-disable-next-line no-unused-expressions
-  <Text> 
+  <Text style={styles.smallText}> 
     1 
     {' '}
     {base}

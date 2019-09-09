@@ -10,7 +10,7 @@ import styles from './styles';
 /* Comment for Image Element:
 To get the actual image were going to create a prop */
 const Logo = () => (
-  <View style={styles.contianer}>
+  <View style={styles.container}>
     <ImageBackground resizeMode="contain" style={styles.containerImage} source={require('./images/background.png')}>
       <Image stles={styles.image} source={require('./images/logo.png')} />
     </ImageBackground>
