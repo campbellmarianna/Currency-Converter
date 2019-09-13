@@ -16,12 +16,12 @@ const TEMP_CONVERSION_RATE = 0.7974;
 const TEMP_LAST_CONVERTED = new Date();
 
 class Home extends Component {
-  handlePressBaseCurreny = () => {
-    console.log('press base');
+  handlePressBaseCurrency = () => {
+    console.log('press base currency');
   };
 
   handlePressQuoteCurrency = () => {
-    console.log('press quote');
+    console.log('press quote currency');
   };
 
   handleTextChange = (text) => {
@@ -29,7 +29,7 @@ class Home extends Component {
   };
 
   handleSwapCurrency = () => {
-    console.log('press swap currency');
+    console.log('handle swap currency');
   };
 
   handleOptionsPress = () => {
@@ -40,12 +40,12 @@ class Home extends Component {
     return (
       <Container>
         <StatusBar translucent={false} barStyle="light-content" />
-        <Header onPress={this.handleOptionsPress}/>
+        <Header onPress={this.handleOptionsPress} />
         <KeyboardAvoidingView behavior="padding">
           <Logo />
           <InputWithButton
             buttonText={TEMP_BASE_CURRENCY}
-            onPress={this.handlePressQuoteCurrency}
+            onPress={this.handlePressBaseCurrency}
             defaultValue={TEMP_BASE_PRICE}
             keyboardType="numeric"
             onChangeText={this.handleTextChange}

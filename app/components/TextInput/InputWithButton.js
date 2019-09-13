@@ -7,6 +7,15 @@ import color from 'color';
 
 import styles from './styles';
 
+// <MyInputComponent a={11} />
+const MyInputComponent = ({ a, b }) => { // props = { a: 11, b: 22, c: 33 }
+
+  // ...
+  // a -> 11
+  // b -> 22
+
+}
+
 // How does this work???
 const InputWithButton = ({
   editable,
