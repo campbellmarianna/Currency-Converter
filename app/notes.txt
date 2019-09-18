@@ -14,3 +14,13 @@ Notes from Week 2 Session
 - However the business logic is ran in javaScript
 - The developer that used the BackgroundImage component used the resize prop and gave it a value (they knew how to use it) because they read the documentation
  - [Image Background Documentation](https://facebook.github.io/react-native/docs/imagebackground)
+
+Week 4 Questions
+We would create the component in curlly braces only then we changed it so that extends Component with a render func and return. Why did we do that?
+What does this line of code mean `{ selected ? <Text>Selected</Text> : null}` in './components/List/ListItem'? What does it do?
+  - Break it down
+How does the visible and not visible checkmark work?
+
+
+Design Decison Summary - End of ListItem Tutorial
+- We build up complex components then break them up into different components just so they can really focus on thing and doing that really well. Then we composed those multiple components into one to actually function the way we want and we can did that all via props being passed in down through a part component.
