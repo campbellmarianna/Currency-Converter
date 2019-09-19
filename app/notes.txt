@@ -24,3 +24,40 @@ How does the visible and not visible checkmark work?
 
 Design Decison Summary - End of ListItem Tutorial
 - We build up complex components then break them up into different components just so they can really focus on thing and doing that really well. Then we composed those multiple components into one to actually function the way we want and we can did that all via props being passed in down through a part component.
+
+Notes from Week 4 Session:
+```
+// A function is an object in JavaScript
+// function MyFunc() { console.log('Hello World')}
+// MyFunc.someValue = 99
+// MyFunc() // Hello World
+// console.log(MyFunc.someValue) // 99
+
+// const obj = {}
+// obj.a = 88
+
+// function Person() {
+//   this.age = 77
+//   this.shoeSize = 9
+// }
+
+// Person.sayHello = function() {
+//   console.log(this.age, this.shoeSize)
+// }
+
+// const joe = new Person()
+// joe.sayHello()
+
+// class MyClass {
+//   constructor() {
+//     this.count = 0
+//   }
+
+//   whatsTheCount() {
+//     console.log(this.count)
+//   }
+// }
+
+// const t = new MyClass()
+// t.whatsTheCount()
+```

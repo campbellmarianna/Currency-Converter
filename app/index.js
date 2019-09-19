@@ -2,7 +2,7 @@
 import React from 'react';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-import CurrencyList from './screens/CurrencyList';
+import Options from './screens/Options';
 
 // Build our stylesheet before our application renders
 // Set global variables and calc styles
@@ -17,4 +17,4 @@ EStyleSheet.build({
 });
 
 // Export a function that then returns a component
-export default () => <CurrencyList />;
+export default () => <Options />;
