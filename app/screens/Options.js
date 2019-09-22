@@ -24,16 +24,12 @@ class Options extends Component {
         <ListItem
           text="Themes"
           onPress={this.handleThemesPress}
-          customIcon={<Ionicons name={`${ICON_PREFIX}-arrow-forward`} size={ICON_SIZE} color={ICON_COLOR} />
-          }
         />
-       
+
         <Separator />
         <ListItem
           text="Fixer.io"
           onPress={this.handleSitePress}
-          customIcon={<Ionicons name={`${ICON_PREFIX}-arrow-forward`} size={ICON_SIZE} color={ICON_COLOR} />
-          }
         />
         <Separator />
       </ScrollView>

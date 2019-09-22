@@ -61,3 +61,5 @@ Notes from Week 4 Session:
 // const t = new MyClass()
 // t.whatsTheCount()
 ```
+
+Really helpful article to understanding how React Native is used for a transportation software: https://blog.expo.io/react-native-and-expo-at-flexport-2ac7841b2268?gi=1b0526ce7ff9

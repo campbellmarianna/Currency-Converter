@@ -8,6 +8,9 @@ import Options from './screens/Options';
 // Set global variables and calc styles
 EStyleSheet.build({
   $primaryBlue: '#4F6D7A',
+  $primaryOrange: '#D57A66',
+  $primaryGreen: '#00BD9D',
+  $primaryPurple: '#9E768F',
 
   $white: '#FFFFFF',
   $border: '#E2E2E2',
