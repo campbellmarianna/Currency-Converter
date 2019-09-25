@@ -32,6 +32,14 @@ const HomeStack = createStackNavigator(
   },
 );
 
+const CurrencyListStack = createStackNavigator({
+  CurrencyList: {
+    screen: CurrencyList,
+    navigationOptions: ({ navigation }) => ({
+      headerTitle: navigation.state.params.title,
+    }),
+  },
+});
 
 // root navigator , the only navigator our app cares about
 export default createStackNavigator(
@@ -40,10 +48,7 @@ export default createStackNavigator(
       screen: HomeStack,
     },
     CurrencyList: {
-      screen: CurrencyList,
-      navigationOptions: ({ navigation }) => ({
-        headerTitle: navigation.state.params.title,
-      }),
+      screen: CurrencyListStack,
     },
   }, {
     mode: 'modal',
