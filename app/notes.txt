@@ -1,0 +1,33 @@
+Redux
+separation of concerns
+- manage state
+- distribute data
+- store different data
+components
+- render the data
+screens
+- actions not happening when scheduled
+
+*************** Data Design*****************
+In Redux data is always stored in objects
+{
+  currencies: {
+    baseCurrency: <String>,
+    quoteCurrency: <String>,
+    amount: <Number>,
+    conversions: {
+      [CURRENCY_STRING]: {
+        isFetching: <Boolean>
+        data: <String>, // from api
+        rates: { // from api
+          [CURRENCY_STRING]: <Number>
+        }
+      }
+    }
+  },
+  themes: {
+    primaryColor: <String>,
+  },
+}
+
+store - is where contain all our app's data

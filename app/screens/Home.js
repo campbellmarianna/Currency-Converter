@@ -9,6 +9,8 @@ import { ClearButton } from '../components/Button';
 import { LastConverted } from '../components/Text';
 import { Header } from '../components/Header';
 
+import { swapCurrency, changeCurrencyAmount } from '../actions/currencies';
+
 const TEMP_BASE_CURRENCY = 'USD';
 const TEMP_QUOTE_CURRENCY = 'GBP';
 const TEMP_BASE_PRICE = '100';
@@ -21,8 +23,9 @@ class Home extends Component {
     navigation: PropTypes.object,
   };
 
-  handleChangeText = () => {
-    console.log('change text');
+  handleChangeText = (amount) => {
+    // TODO: Make this actually work with this.props.dispatch
+    console.log(changeCurrencyAmount(amount));
   };
 
   handlePressBaseCurrency = () => {
@@ -36,11 +39,8 @@ class Home extends Component {
   };
 
   handleSwapCurrency = () => {
-    console.log('handle swap currency');
-  };
-
-  handleSwapCurrency = () => {
-    console.log('handle swap currency');
+    // TODO: Make this actually work with this.props.dispatch
+    console.log(swapCurrency());
   };
 
   handleOptionsPress = () => {
