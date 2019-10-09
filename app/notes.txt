@@ -34,6 +34,7 @@ store - is where contain all our app's data
 
 to tell redux what to save based on the reducer
 - reducer takes inputs
+- modify input
 
 - We've put 
 Set of store
@@ -41,4 +42,7 @@ Set of store
 - access state
 - KEY IDEA: only one store 
   - can organize reducer logic instead create many stores
+- I got new information
 Info Source: https://redux.js.org/basics/store
+
+- driving all of our user interface based on our Redux state

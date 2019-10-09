@@ -12,8 +12,7 @@ import { Header } from '../components/Header';
 
 import { swapCurrency, changeCurrencyAmount } from '../actions/currencies';
 
-const TEMP_BASE_CURRENCY = 'USD';
-const TEMP_QUOTE_CURRENCY = 'GBP';
+
 const TEMP_BASE_PRICE = '100';
 const TEMP_QUOTE_PRICE = '79.74';
 const TEMP_LAST_CONVERTED = new Date();
@@ -23,10 +22,13 @@ class Home extends Component {
   static propTypes = {
     navigation: PropTypes.object,
     dispatch: PropTypes.func,
+    baseCurrency: PropTypes.string,
+    quoteCurrency: PropTypes.string,
   };
 
   handleChangeText = (amount) => {
-    this.props.dispatch(changeCurrencyAmount(amount));
+    const { dispatch } = this.props;
+    dispatch(changeCurrencyAmount(amount));
   };
 
   handlePressBaseCurrency = () => {
@@ -40,7 +42,8 @@ class Home extends Component {
   };
 
   handleSwapCurrency = () => {
-    this.props.dispatch(swapCurrency());
+    const { dispatch } = this.props;
+    dispatch(swapCurrency());
   };
 
   handleOptionsPress = () => {
@@ -49,6 +52,10 @@ class Home extends Component {
   };
 
   render() {
+    const {
+      baseCurrency,
+      quoteCurrency,
+    } = this.props;
     return (
       <Container>
         <StatusBar backgroundColor="blue" barStyle="light-content" />
@@ -56,7 +63,7 @@ class Home extends Component {
         <KeyboardAvoidingView behavior="padding">
           <Logo />
           <InputWithButton
-            buttonText={TEMP_BASE_CURRENCY}
+            buttonText={baseCurrency}
             onPress={this.handlePressBaseCurrency}
             defaultValue={TEMP_BASE_PRICE}
             keyboardType="numeric"
@@ -64,14 +71,14 @@ class Home extends Component {
           />
           <InputWithButton
             editable={false}
-            buttonText={TEMP_QUOTE_CURRENCY}
+            buttonText={quoteCurrency}
             onPress={this.handlePressQuoteCurrency}
             value={TEMP_QUOTE_PRICE}
           />
           <LastConverted
             date={TEMP_LAST_CONVERTED}
-            base={TEMP_BASE_CURRENCY}
-            quote={TEMP_QUOTE_CURRENCY}
+            base={baseCurrency}
+            quote={quoteCurrency}
             conversionRate={TEMP_CONVERSION_RATE}
           />
           <ClearButton onPress={this.handleSwapCurrency} text="Reverse Currencies" />
@@ -81,4 +88,14 @@ class Home extends Component {
   }
 }
 
-export default connect()(Home);
+// I see this new information pass it on to props
+const mapStateToProps = (state) => {
+  const { baseCurrency, quoteCurrency } = state.currencies;
+
+  return {
+    baseCurrency,
+    quoteCurrency,
+  };
+};
+
+export default connect(mapStateToProps)(Home);
