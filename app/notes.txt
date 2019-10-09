@@ -38,3 +38,7 @@ to tell redux what to save based on the reducer
 - We've put 
 Set of store
 - Our store brings everything together
+- access state
+- KEY IDEA: only one store 
+  - can organize reducer logic instead create many stores
+Info Source: https://redux.js.org/basics/store
