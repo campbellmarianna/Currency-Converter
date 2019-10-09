@@ -115,3 +115,10 @@ In Redux data is always stored in objects
 }
 
 Reducers are purely functions - actual logic of what we want to do to some data
+
+Set up a store
+- Our store brings everything together
+- access state
+- KEY IDEA: only one store 
+  - can organize reducer logic instead create many stores
+Info Source: https://redux.js.org/basics/store
