@@ -31,3 +31,6 @@ In Redux data is always stored in objects
 }
 
 store - is where contain all our app's data
+
+to tell redux what to save based on the reducer
+- reducer takes inputs
