@@ -34,3 +34,7 @@ store - is where contain all our app's data
 
 to tell redux what to save based on the reducer
 - reducer takes inputs
+
+- We've put 
+Set of store
+- Our store brings everything together
