@@ -113,3 +113,5 @@ In Redux data is always stored in objects
     primaryColor: <String>,
   },
 }
+
+Reducers are purely functions - actual logic of what we want to do to some data
