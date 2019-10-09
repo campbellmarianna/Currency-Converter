@@ -122,3 +122,6 @@ Set up a store
 - KEY IDEA: only one store 
   - can organize reducer logic instead create many stores
 Info Source: https://redux.js.org/basics/store
+
+Reading Currency Data from Store
+- driving all of our user interface based on our Redux state
