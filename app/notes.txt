@@ -50,3 +50,5 @@ Info Source: https://redux.js.org/basics/store
 Place in tutorial: https://learn.handlebarlabs.com/courses/175915/lectures/2769043
 
 Time: 4:28
+
+reducers - effect the state
