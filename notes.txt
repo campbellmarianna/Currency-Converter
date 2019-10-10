@@ -125,3 +125,11 @@ Info Source: https://redux.js.org/basics/store
 
 Reading Currency Data from Store
 - driving all of our user interface based on our Redux state
+
+
+What are Actions:
+- what you want to watch for
+- what functions you want to create
+- what information you want to pass through
+
+While reducers are how you want to accomplisht the task change what the user sees or what information the database has based off state
