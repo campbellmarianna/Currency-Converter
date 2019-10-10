@@ -46,3 +46,7 @@ Set of store
 Info Source: https://redux.js.org/basics/store
 
 - driving all of our user interface based on our Redux state
+
+Place in tutorial: https://learn.handlebarlabs.com/courses/175915/lectures/2769043
+
+Time: 4:28
