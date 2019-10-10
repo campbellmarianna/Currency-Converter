@@ -23,6 +23,7 @@ class Home extends Component {
     conversionRate: PropTypes.number,
     isFetching: PropTypes.bool,
     lastConvertedDate: PropTypes.object,
+    primaryColor: PropTypes.string,
   };
 
   handleChangeText = (amount) => {
@@ -59,6 +60,7 @@ class Home extends Component {
       conversionRate,
       isFetching,
       lastConvertedDate,
+      primaryColor,
     } = this.props;
 
     let quotePrice = '...';
@@ -67,23 +69,25 @@ class Home extends Component {
     }
 
     return (
-      <Container>
+      <Container backgroundColor={primaryColor}>
         <StatusBar backgroundColor="blue" barStyle="light-content" />
         <Header onPress={this.handleOptionsPress} />
         <KeyboardAvoidingView behavior="padding">
-          <Logo />
+          <Logo tintColor={primaryColor} />
           <InputWithButton
             buttonText={baseCurrency}
             onPress={this.handlePressBaseCurrency}
             defaultValue={amount.toString()}
             keyboardType="numeric"
             onChangeText={this.handleChangeText}
+            textColor={primaryColor}
           />
           <InputWithButton
             editable={false}
             buttonText={quoteCurrency}
             onPress={this.handlePressQuoteCurrency}
             value={quotePrice}
+            textColor={primaryColor}
           />
           <LastConverted
             date={lastConvertedDate}
@@ -111,6 +115,7 @@ const mapStateToProps = (state) => {
     conversionRate: rates[quoteCurrency] || 0,
     isFetching: conversionSelector.isFetching,
     lastConvertedDate: conversionSelector.date ? new Date(conversionSelector.date) : new Date(),
+    primaryColor: state.theme.primaryColor,
   };
 };
 // Another way to dispatch props

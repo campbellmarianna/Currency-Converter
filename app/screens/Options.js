@@ -34,15 +34,11 @@ class Options extends Component {
         <ListItem
           text="Themes"
           onPress={this.handlePressThemes}
-          customIcon={
-            <Ionicons name={`${ICON_PREFIX}-arrow-forward`} size={ICON_SIZE} color={ICON_COLOR} />
-          }
         />
         <Separator />
         <ListItem
           text="Handlebar Labs"
           onPress={this.handlePressSite}
-          customIcon={<Ionicons name={`${ICON_PREFIX}-link`} size={ICON_SIZE} color={ICON_COLOR} />}
         />
         <Separator />
       </ScrollView>
