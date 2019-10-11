@@ -5,11 +5,11 @@ import { takeEvery, select, call, put } from 'redux-saga/effects';
 
 import {SWAP_CURRENCY, CHANGE_BASE_CURRENCY, GET_INITIAL_CONVERSION, CONVERSION_RESULT, CONVERSION_ERROR } from '../actions/currencies';
 
-const getLatestRate = currency => fetch(`https://fixer.handlebarlabs.com/latest?base=${currency}`);
+export const getLatestRate = currency => fetch(`https://fixer.handlebarlabs.com/latest?base=${currency}asdsdfsd`);
 
-function* fetchLatestConversionRates(action) {
+const fetchLatestConversionRates = function* (action) {
   try {
-    let currency = action.currency;
+    let { currency } = action;
     if (currency == undefined) {
       currency = yield select(state => state.currencies.baseCurrency)
     }
@@ -23,12 +23,14 @@ function* fetchLatestConversionRates(action) {
     } else {
       yield put({ type: CONVERSION_RESULT, result });
     }
-  } catch (e) {
-    yield put({ type: CONVERSION_ERROR, error: result.error });
+  } catch (error) {
+    yield put({ type: CONVERSION_ERROR, error: error.message });
   }
-}
-export default function* rootSaga() {
+};
+const rootSaga = function* () {
   yield takeEvery(GET_INITIAL_CONVERSION, fetchLatestConversionRates);
-  yield takeEvery(SWAP_CURRENCY, fetchLatestConversionRates);
   yield takeEvery(CHANGE_BASE_CURRENCY, fetchLatestConversionRates);
+  yield takeEvery(SWAP_CURRENCY, fetchLatestConversionRates);
 }
+
+export default rootSaga;
